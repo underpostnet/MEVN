@@ -1,5 +1,5 @@
 {
-  "name": "eva1-hospital-el-alerce",
+  "name": "notes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/giovanidiaz/multi-nativa-eva1.git"
+    "url": "https://github.com/underpostnet/MEVN"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/giovanidiaz/multi-nativa-eva1/issues"
+    "url": "https://github.com/underpostnet/MEVN"
   },
-  "homepage": "https://github.com/giovanidiaz/multi-nativa-eva1#readme",
+  "homepage": "https://github.com/underpostnet",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

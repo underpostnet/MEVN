@@ -2,10 +2,8 @@ const { Router } = require('express');
 
 const router = Router();
 
-const pacientes = require('./pacientes');
-const medicos = require('./medicos');
+const notes = require('./notes');
 
-router.use('/pacientes', pacientes);
-router.use('/medicos', medicos);
+router.use('/notes', notes);
 
 module.exports = router;

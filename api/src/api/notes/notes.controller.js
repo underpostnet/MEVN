@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const notas = require('./notas.services');
+const notes = require('./notes.services');
 
-const notasCtrl = {};
+const notesCtrl = {};
 
-// Find all notas
-notasCtrl.findAll = async (req, res) => {
+// Find all notes
+notesCtrl.findAll = async (req, res) => {
   try {
-    const result = await notas.findAll();
+    const result = await notes.findAll();
     res.json(result);
   } catch (err) {
     res.status(500).json({
@@ -17,10 +17,10 @@ notasCtrl.findAll = async (req, res) => {
   }
 };
 
-// Find nota by id
-notasCtrl.findById = async (req, res) => {
+// Find note by id
+notesCtrl.findById = async (req, res) => {
   try {
-    const result = await notas.findById(req.params.id);
+    const result = await notes.findById(req.params.id);
     res.json(result);
   } catch (err) {
     res.status(500).json({
@@ -29,12 +29,12 @@ notasCtrl.findById = async (req, res) => {
   }
 };
 
-// Create nota
-notasCtrl.create = async (req, res) => {
+// Create note
+notesCtrl.create = async (req, res) => {
   try {
     console.log(req.body);
-    const nota = req.body;
-    const result = await notas.create(nota);
+    const note = req.body;
+    const result = await notes.create(note);
     if (!result) {
       res.status(400).json(result.errors);
     } else {
@@ -47,10 +47,10 @@ notasCtrl.create = async (req, res) => {
   }
 };
 
-// Update nota
-notasCtrl.update = async (req, res) => {
+// Update note
+notesCtrl.update = async (req, res) => {
   try {
-    const result = await notas.update(req.params.id, req.body);
+    const result = await notes.update(req.params.id, req.body);
     res.json(result);
   } catch (err) {
     res.status(500).json({
@@ -59,10 +59,10 @@ notasCtrl.update = async (req, res) => {
   }
 };
 
-// Delete nota
-notasCtrl.delete = async (req, res) => {
+// Delete note
+notesCtrl.delete = async (req, res) => {
   try {
-    const result = await notas.delete(req.params.id);
+    const result = await notes.delete(req.params.id);
     res.json(result);
   } catch (err) {
     res.status(500).json({
@@ -71,10 +71,10 @@ notasCtrl.delete = async (req, res) => {
   }
 };
 
-// Edit nota
-notasCtrl.edit = async (req, res) => {
+// Edit note
+notesCtrl.edit = async (req, res) => {
   try {
-    const result = await notas.edit(req.params.id, req.body);
+    const result = await notes.edit(req.params.id, req.body);
     res.json(result);
   } catch (err) {
     res.status(500).json({
@@ -83,4 +83,4 @@ notasCtrl.edit = async (req, res) => {
   }
 };
 
-module.exports = notasCtrl;
+module.exports = notesCtrl;
