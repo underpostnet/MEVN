@@ -1,5 +1,10 @@
 # web
 
+## To create a new project, run:
+```
+vue create project-name
+```
+
 ## Project setup
 ```
 npm install
@@ -18,6 +23,12 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+
+### You can also create and manage projects using a graphical interface with the vue ui command:
+```
+vue ui
 ```
 
 ### Customize configuration
