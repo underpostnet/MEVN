@@ -1,11 +1,11 @@
 # web
 
-## To create a new project, run:
+### To create a new project, run:
 ```
 vue create project-name
 ```
 
-## Project setup
+### Project setup
 ```
 npm install
 ```
